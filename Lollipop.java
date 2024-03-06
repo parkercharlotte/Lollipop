@@ -31,7 +31,7 @@ public class Lollipop
     public void doDrawLollipop(double x, double y, double size, double stick){
         // Declare variables
         double left = x - size/2; // left most pos of lollipop
-        double top = 7 - size/2; // top most pos of lollipop
+        double top = y - size/2; // top most pos of lollipop
         double bottom = y + stick; // bottom most pos of lollipop
         
         // Draw the stick
@@ -45,10 +45,13 @@ public class Lollipop
         UI.fillOval(left, top, size, size);
     }
     public void drawLollipops (){
+        
+        double diameter = UI.askDouble("Diameter: ");
+        
         this.doDrawLollipop(300, 180, 80, 200);
-        this.doDrawLollipop(100, 50, 20, 20);
-        this.doDrawLollipop(150, 60, 90, 50);
-        this.doDrawLollipop(0, 0, 90, 30);
+        this.doDrawLollipop(100, 50, 200, 20);
+        this.doDrawLollipop(400, 60, 90, 500);
+        this.doDrawLollipop(10, 60, 90, 300);
     }
     
 }
